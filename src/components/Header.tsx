@@ -18,15 +18,14 @@ export const Header = ({ onRegisterClick }: { onRegisterClick: () => void }) => 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center justify-between">
-          <div className="flex items-center gap-2">
-            <span className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              CMD
-            </span>
+        <div className="grid grid-cols-3 items-center h-16 gap-4">
+          {/* Left Section - Empty */}
+          <div className="flex items-center">
+            {/* Intentionally empty */}
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6">
+          {/* Middle Section - Navigation */}
+          <nav className="hidden md:flex items-center justify-center gap-6">
             <button
               onClick={() => scrollToSection("home")}
               className="text-sm font-medium transition-colors hover:text-primary"
@@ -53,7 +52,8 @@ export const Header = ({ onRegisterClick }: { onRegisterClick: () => void }) => 
             </button>
           </nav>
 
-          <div className="flex items-center gap-2">
+          {/* Right Section - Controls */}
+          <div className="flex items-center justify-end gap-2">
             <LanguageToggle />
             <ThemeToggle />
             <Button
