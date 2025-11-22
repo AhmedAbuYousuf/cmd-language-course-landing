@@ -82,11 +82,14 @@ const resources = {
         payment: "Payment Method",
         card: "Credit/Debit Card",
         banking: "E-Banking",
+        mobileBanking: "Mobile Banking",
         cardNumber: "Card Number",
         expiry: "Expiry Date",
         cvv: "CVV",
         bankName: "Bank Name",
         accountNumber: "Account Number",
+        mobileProvider: "Mobile Banking Provider",
+        mobileNumber: "Mobile Number",
         submit: "Complete Registration"
       },
       footer: {
@@ -180,11 +183,14 @@ const resources = {
         payment: "পেমেন্ট পদ্ধতি",
         card: "ক্রেডিট/ডেবিট কার্ড",
         banking: "ই-ব্যাংকিং",
+        mobileBanking: "মোবাইল ব্যাংকিং",
         cardNumber: "কার্ড নম্বর",
         expiry: "মেয়াদ উত্তীর্ণের তারিখ",
         cvv: "সিভিভি",
         bankName: "ব্যাংকের নাম",
         accountNumber: "অ্যাকাউন্ট নম্বর",
+        mobileProvider: "মোবাইল ব্যাংকিং প্রদানকারী",
+        mobileNumber: "মোবাইল নম্বর",
         submit: "নিবন্ধন সম্পন্ন করুন"
       },
       footer: {

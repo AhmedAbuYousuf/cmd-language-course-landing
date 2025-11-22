@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useTranslation } from "react-i18next";
 import { useToast } from "@/hooks/use-toast";
-import { CreditCard, Building2 } from "lucide-react";
+import { CreditCard, Building2, Smartphone } from "lucide-react";
 
 interface RegistrationFormProps {
   open: boolean;
@@ -16,7 +16,7 @@ interface RegistrationFormProps {
 export const RegistrationForm = ({ open, onOpenChange }: RegistrationFormProps) => {
   const { t } = useTranslation();
   const { toast } = useToast();
-  const [paymentMethod, setPaymentMethod] = useState<"card" | "banking">("card");
+  const [paymentMethod, setPaymentMethod] = useState<"card" | "banking" | "mobileBanking">("card");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -28,6 +28,8 @@ export const RegistrationForm = ({ open, onOpenChange }: RegistrationFormProps) 
     cvv: "",
     bankName: "",
     accountNumber: "",
+    mobileProvider: "",
+    mobileNumber: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -48,6 +50,8 @@ export const RegistrationForm = ({ open, onOpenChange }: RegistrationFormProps) 
       cvv: "",
       bankName: "",
       accountNumber: "",
+      mobileProvider: "",
+      mobileNumber: "",
     });
   };
 
@@ -130,7 +134,7 @@ export const RegistrationForm = ({ open, onOpenChange }: RegistrationFormProps) 
           {/* Payment Method Selection */}
           <div className="space-y-4 pt-4 border-t border-border">
             <Label>{t("form.payment")}</Label>
-            <RadioGroup value={paymentMethod} onValueChange={(value) => setPaymentMethod(value as "card" | "banking")}>
+            <RadioGroup value={paymentMethod} onValueChange={(value) => setPaymentMethod(value as "card" | "banking" | "mobileBanking")}>
               <div className="flex items-center space-x-2 p-4 rounded-lg border-2 border-border hover:border-primary transition-colors cursor-pointer">
                 <RadioGroupItem value="card" id="card" />
                 <Label htmlFor="card" className="flex items-center gap-2 cursor-pointer flex-1">
@@ -145,11 +149,18 @@ export const RegistrationForm = ({ open, onOpenChange }: RegistrationFormProps) 
                   {t("form.banking")}
                 </Label>
               </div>
+              <div className="flex items-center space-x-2 p-4 rounded-lg border-2 border-border hover:border-primary transition-colors cursor-pointer">
+                <RadioGroupItem value="mobileBanking" id="mobileBanking" />
+                <Label htmlFor="mobileBanking" className="flex items-center gap-2 cursor-pointer flex-1">
+                  <Smartphone className="w-5 h-5 text-accent" />
+                  {t("form.mobileBanking")}
+                </Label>
+              </div>
             </RadioGroup>
           </div>
 
           {/* Payment Details */}
-          {paymentMethod === "card" ? (
+          {paymentMethod === "card" && (
             <div className="space-y-4 animate-in fade-in slide-in-from-right duration-300">
               <div className="space-y-2">
                 <Label htmlFor="cardNumber">{t("form.cardNumber")}</Label>
@@ -187,7 +198,9 @@ export const RegistrationForm = ({ open, onOpenChange }: RegistrationFormProps) 
                 </div>
               </div>
             </div>
-          ) : (
+          )}
+          
+          {paymentMethod === "banking" && (
             <div className="space-y-4 animate-in fade-in slide-in-from-left duration-300">
               <div className="space-y-2">
                 <Label htmlFor="bankName">{t("form.bankName")}</Label>
@@ -207,6 +220,32 @@ export const RegistrationForm = ({ open, onOpenChange }: RegistrationFormProps) 
                   value={formData.accountNumber}
                   onChange={(e) => handleChange("accountNumber", e.target.value)}
                   placeholder={t("form.accountNumber")}
+                />
+              </div>
+            </div>
+          )}
+
+          {paymentMethod === "mobileBanking" && (
+            <div className="space-y-4 animate-in fade-in slide-in-from-bottom duration-300">
+              <div className="space-y-2">
+                <Label htmlFor="mobileProvider">{t("form.mobileProvider")}</Label>
+                <Input
+                  id="mobileProvider"
+                  required
+                  value={formData.mobileProvider}
+                  onChange={(e) => handleChange("mobileProvider", e.target.value)}
+                  placeholder="bKash, Nagad, Rocket, etc."
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="mobileNumber">{t("form.mobileNumber")}</Label>
+                <Input
+                  id="mobileNumber"
+                  type="tel"
+                  required
+                  value={formData.mobileNumber}
+                  onChange={(e) => handleChange("mobileNumber", e.target.value)}
+                  placeholder="01XXXXXXXXX"
                 />
               </div>
             </div>

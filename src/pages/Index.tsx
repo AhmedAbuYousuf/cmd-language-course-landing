@@ -20,7 +20,7 @@ const Index = () => {
         <Teachers />
         <WhySection />
       </main>
-      <Footer />
+      <Footer onRegisterClick={() => setIsRegistrationOpen(true)} />
       <RegistrationForm
         open={isRegistrationOpen}
         onOpenChange={setIsRegistrationOpen}
