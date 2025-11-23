@@ -20,7 +20,7 @@ export const Footer = () => {
   return (
     <footer className="bg-muted/50 border-t border-border py-16">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 lg:gap-12 text-center">
           {/* Left Section - Company Info */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
@@ -34,30 +34,30 @@ export const Footer = () => {
           {/* Center Section - Navigation Links */}
           <div className="space-y-6">
             <h3 className="text-lg font-bold text-foreground">{t("footer.quickLinks")}</h3>
-            <div className="space-y-3">
+            <div className="space-y-3 flex flex-col items-center">
               <a 
                 href="https://www.cmd-bd.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="block text-muted-foreground hover:text-primary transition-colors"
+                className="text-muted-foreground hover:text-primary transition-colors"
               >
                 {t("footer.mainWebsite")}
               </a>
               <button
                 onClick={() => scrollToSection("features")}
-                className="block text-muted-foreground hover:text-primary transition-colors text-left"
+                className="text-muted-foreground hover:text-primary transition-colors"
               >
                 {t("nav.features")}
               </button>
               <button
                 onClick={() => scrollToSection("teachers")}
-                className="block text-muted-foreground hover:text-primary transition-colors text-left"
+                className="text-muted-foreground hover:text-primary transition-colors"
               >
                 {t("nav.teachers")}
               </button>
               <button
                 onClick={() => scrollToSection("why")}
-                className="block text-muted-foreground hover:text-primary transition-colors text-left"
+                className="text-muted-foreground hover:text-primary transition-colors"
               >
                 {t("nav.why")}
               </button>
@@ -67,7 +67,7 @@ export const Footer = () => {
           {/* Right Section - Social Media */}
           <div className="space-y-6">
             <h3 className="text-lg font-bold text-foreground">{t("footer.followUs")}</h3>
-            <div className="flex gap-3">
+            <div className="flex gap-3 justify-center">
               <a
                 href={socialLinks.facebook}
                 target="_blank"
