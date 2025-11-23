@@ -92,10 +92,22 @@ const resources = {
         mobileNumber: "Mobile Number",
         submit: "Complete Registration"
       },
+      gallery: {
+        title: "Gallery & Announcements",
+        item1: "Classroom Environment",
+        description1: "Modern facilities for effective learning",
+        item2: "Course Materials",
+        description2: "Comprehensive study resources",
+        item3: "Student Activities",
+        description3: "Engaging learning experiences",
+        item4: "Special Events",
+        description4: "Workshops and seminars",
+        swipeHint: "Swipe or use arrows to view more"
+      },
       footer: {
         company: "Centre for Management Development Ltd. (CMD)",
         rights: "All rights reserved",
-        contact: "Contact Information",
+        contact: "Contact Us",
         email: "Email",
         phone: "Call",
         website: "Website",
@@ -195,10 +207,22 @@ const resources = {
         mobileNumber: "মোবাইল নম্বর",
         submit: "নিবন্ধন সম্পন্ন করুন"
       },
+      gallery: {
+        title: "গ্যালারি এবং ঘোষণা",
+        item1: "ক্লাসরুম পরিবেশ",
+        description1: "কার্যকর শেখার জন্য আধুনিক সুবিধা",
+        item2: "কোর্স উপকরণ",
+        description2: "ব্যাপক অধ্যয়ন সম্পদ",
+        item3: "ছাত্র কার্যক্রম",
+        description3: "আকর্ষক শেখার অভিজ্ঞতা",
+        item4: "বিশেষ ইভেন্ট",
+        description4: "কর্মশালা এবং সেমিনার",
+        swipeHint: "আরো দেখতে সোয়াইপ করুন বা তীর ব্যবহার করুন"
+      },
       footer: {
         company: "সেন্টার ফর ম্যানেজমেন্ট ডেভেলপমেন্ট লিমিটেড (CMD)",
         rights: "সমস্ত অধিকার সংরক্ষিত",
-        contact: "যোগাযোগের তথ্য",
+        contact: "আমাদের সাথে যোগাযোগ করুন",
         email: "ইমেল",
         phone: "কল",
         website: "ওয়েবসাইট",

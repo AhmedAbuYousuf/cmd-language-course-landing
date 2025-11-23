@@ -4,6 +4,8 @@ import { Hero } from "@/components/Hero";
 import { Features } from "@/components/Features";
 import { Teachers } from "@/components/Teachers";
 import { WhySection } from "@/components/WhySection";
+import { Gallery } from "@/components/Gallery";
+import { Contact } from "@/components/Contact";
 import { RegistrationForm } from "@/components/RegistrationForm";
 import { Footer } from "@/components/Footer";
 import "@/i18n/config";
@@ -19,8 +21,10 @@ const Index = () => {
         <Features />
         <Teachers />
         <WhySection />
+        <Gallery />
+        <Contact />
       </main>
-      <Footer onRegisterClick={() => setIsRegistrationOpen(true)} />
+      <Footer />
       <RegistrationForm
         open={isRegistrationOpen}
         onOpenChange={setIsRegistrationOpen}
