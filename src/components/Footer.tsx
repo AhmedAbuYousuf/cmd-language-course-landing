@@ -1,9 +1,7 @@
-import { Facebook, Instagram, Linkedin, Mail, Phone, Globe } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { ContactForm } from "./ContactForm";
 
-export const Footer = ({ onRegisterClick }: { onRegisterClick: () => void }) => {
+export const Footer = () => {
   const { t } = useTranslation();
 
   const socialLinks = {
@@ -23,41 +21,14 @@ export const Footer = ({ onRegisterClick }: { onRegisterClick: () => void }) => 
     <footer className="bg-muted/50 border-t border-border py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 lg:gap-12">
-          {/* Left Section - Company Info + Contact Form */}
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                {t("footer.company")}
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Professional Japanese language training for care-giver aspirants. Expert instructors, comprehensive curriculum, and career placement support.
-              </p>
-              <div className="space-y-2 text-sm">
-                <div className="flex items-center gap-2 text-muted-foreground">
-                  <Mail className="w-4 h-4 text-primary" />
-                  <a href="mailto:cmdconsultant@yahoo.com" className="hover:text-primary transition-colors">
-                    cmdconsultant@yahoo.com
-                  </a>
-                </div>
-                <div className="flex items-center gap-2 text-muted-foreground">
-                  <Phone className="w-4 h-4 text-primary" />
-                  <a href="tel:01783862376" className="hover:text-primary transition-colors">
-                    01783-862376
-                  </a>
-                </div>
-                <div className="flex items-center gap-2 text-muted-foreground">
-                  <Globe className="w-4 h-4 text-primary" />
-                  <a href="https://www.cmd-bd.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                    www.cmd-bd.com
-                  </a>
-                </div>
-              </div>
-            </div>
-            
-            <div className="space-y-4">
-              <h3 className="text-lg font-bold text-foreground">{t("footer.contact")}</h3>
-              <ContactForm />
-            </div>
+          {/* Left Section - Company Info */}
+          <div className="space-y-4">
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              {t("footer.company")}
+            </h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Professional Japanese language training for care-giver aspirants. Expert instructors, comprehensive curriculum, and career placement support.
+            </p>
           </div>
 
           {/* Center Section - Navigation Links */}
