@@ -14,7 +14,7 @@ const resources = {
         home: "Home",
         features: "Features",
         teachers: "Teachers",
-        why: "Why CMD",
+        why: "Why Us",
         contact: "Contact"
       },
       features: {
@@ -117,7 +117,7 @@ const resources = {
         home: "হোম",
         features: "বৈশিষ্ট্য",
         teachers: "শিক্ষক",
-        why: "কেন CMD",
+        why: "কেন আমরা",
         contact: "যোগাযোগ"
       },
       features: {

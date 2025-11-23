@@ -22,7 +22,7 @@ export const Footer = ({ onRegisterClick }: { onRegisterClick: () => void }) => 
   return (
     <footer className="bg-muted/50 border-t border-border py-16">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 lg:gap-12">
           {/* Left Section - Company Info + Contact Form */}
           <div className="space-y-8">
             <div className="space-y-4">
