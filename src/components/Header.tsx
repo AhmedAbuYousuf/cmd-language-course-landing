@@ -45,10 +45,10 @@ export const Header = ({ onRegisterClick }: { onRegisterClick: () => void }) => 
               {t("nav.teachers")}
             </button>
             <button
-              onClick={() => scrollToSection("about")}
+              onClick={() => scrollToSection("why")}
               className="text-sm font-medium transition-colors hover:text-primary"
             >
-              {t("nav.about")}
+              {t("nav.why")}
             </button>
           </nav>
 
@@ -95,10 +95,10 @@ export const Header = ({ onRegisterClick }: { onRegisterClick: () => void }) => 
               {t("nav.teachers")}
             </button>
             <button
-              onClick={() => scrollToSection("about")}
+              onClick={() => scrollToSection("why")}
               className="text-sm font-medium transition-colors hover:text-primary text-left"
             >
-              {t("nav.about")}
+              {t("nav.why")}
             </button>
             <Button onClick={onRegisterClick} className="w-full bg-gradient-to-r from-primary to-primary/80">
               {t("hero.cta")}
