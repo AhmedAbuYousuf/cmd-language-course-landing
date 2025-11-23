@@ -22,7 +22,7 @@ export const WhySection = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-muted/30">
+    <section id="why" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* Why Japan */}

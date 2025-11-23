@@ -14,7 +14,7 @@ const resources = {
         home: "Home",
         features: "Features",
         teachers: "Teachers",
-        about: "About",
+        why: "Why CMD",
         contact: "Contact"
       },
       features: {
@@ -99,7 +99,9 @@ const resources = {
         email: "Email",
         phone: "Call",
         website: "Website",
-        followUs: "Follow Us"
+        followUs: "Follow Us",
+        quickLinks: "Quick Links",
+        mainWebsite: "Main Website"
       }
     }
   },
@@ -115,7 +117,7 @@ const resources = {
         home: "হোম",
         features: "বৈশিষ্ট্য",
         teachers: "শিক্ষক",
-        about: "সম্পর্কে",
+        why: "কেন CMD",
         contact: "যোগাযোগ"
       },
       features: {
@@ -200,7 +202,9 @@ const resources = {
         email: "ইমেল",
         phone: "কল",
         website: "ওয়েবসাইট",
-        followUs: "আমাদের অনুসরণ করুন"
+        followUs: "আমাদের অনুসরণ করুন",
+        quickLinks: "দ্রুত লিঙ্ক",
+        mainWebsite: "মূল ওয়েবসাইট"
       }
     }
   }
